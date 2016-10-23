@@ -53,23 +53,5 @@ public class Connection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		Connection con = new Connection("https://api.kktown.com.tw/api/items?size=10");
-		con.JSONtoFile("rawdata");
-		//Fetch Items
-		JSONArray itemArray = con.m_root.getJSONArray("items");
-		for(int i = 0; i < itemArray.length(); i++ ){
-			JSONObject item = itemArray.getJSONObject(i);
-			System.out.println(i+" :\t"+item.get("name"));
-		}
-		
-	}
-
+	}		
 }
