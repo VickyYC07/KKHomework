@@ -6,11 +6,11 @@ public class Seller {
 
   private final String id;
 
-  private final long serialNumber;
+  private final String serialNumber;
 
   private final String nickname;
 
-  public Seller(String id, long serialNumber, String nickname) {
+  public Seller(String id, String serialNumber, String nickname) {
     this.id = id;
     this.serialNumber = serialNumber;
     this.nickname = nickname;
@@ -20,7 +20,7 @@ public class Seller {
     return id;
   }
 
-  public long getSerialNumber() {
+  public String getSerialNumber() {
     return serialNumber;
   }
 
